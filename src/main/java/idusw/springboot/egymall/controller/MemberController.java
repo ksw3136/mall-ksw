@@ -27,7 +27,7 @@ public class MemberController {
     public String getMemberById(@PathVariable("idx") Long idx, Model model) {
         MemberDto dto = memberService.readByIdx(idx);
         model.addAttribute("dto", dto);
-        return "./members/info";
+        return "./members/profile";
     }
     @GetMapping("")
     public String getMembers(Model model) {
